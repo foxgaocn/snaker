@@ -1,0 +1,15 @@
+.row.center
+  %span#prev &lt;&lt;Prev
+  %span#next Next&gt;&gt;
+.row
+  .col-md-6.col-md-offset-3.center
+    .cycle-slideshow{ "data-cycle-fx" => "scrollHorz", "data-cycle-loader" => "true", "data-cycle-progressive" => "#images", "data-cycle-timeout" => "0"}
+      
+      .cycle-prev
+      .cycle-next
+
+      %img{:src => "#{@catalogue.first_image_url}"}
+
+      %script#images{:type => "text/cycle"}
+        -@catalogue.remaining_image_urls.each do |url|
+          <img src='#{url}'>
