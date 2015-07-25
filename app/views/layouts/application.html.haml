@@ -8,8 +8,38 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-static-top
+          .navbar-header
+            %a.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} Catalog Plaza
+          .navbar-collapse.collapse
+            %ul.nav.navbar-nav
+              %li.active
+                %a{:href => "/"} 首页
+              %li
+                %a{:href => "/", :target => "ext"} 关于我们
+              %li
+                %a{:href => "/"} 联系我们
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  合作厂家
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"} 登陆
+                  %li
+                    %a{:href => "#"} 注册
+    = yield
+    .container
+      .row
+        .col-sm-12
+          %footer
+            %p.pull-right
+              %a{:href => "#"} 回到页首
+            %p
+              Catalog plaza 2015, All rights reserved. 

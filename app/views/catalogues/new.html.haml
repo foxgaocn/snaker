@@ -1,4 +1,34 @@
-%h2 create catalogue
-= form_for @catalogue, :url => catalogues_path, :html => { :multipart => true } do |f|
-  = f.file_field :pdf
-  = f.submit 'Submit', class: 'btn btn-primary next'
+.container.content
+  .row
+    .col-sm-12.center
+      %h2 轻松创建你的在线Catalogue
+  %br
+  %br
+  .row
+    .col-sm-12
+      = form_for @catalogue, url: catalogues_path, html: { multipart: true, class: 'form form-horizontal form-border' } do |f|
+        .form-group
+          %label.control-label.col-sm-2 公司网址:
+          .col-sm-10
+            =f.text_field :url, class: "form-control"
+        .form-group
+          %label.control-label.col-sm-2 联系邮箱:
+          .col-sm-10
+            =f.email_field :email, class: "form-control"
+        .form-group
+          %label.control-label.col-sm-2 原始文件:
+          .col-sm-10
+            =f.file_field :pdf, class: "form-control"
+        .form-group
+          .col-sm-12.center
+            = f.submit '提交', id: 'submit', class: 'btn btn-primary'
+
+
+  #myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-body
+          %h2 正在处理你的Catalogue，请稍候.......
+
+  :javascript
+    new Catalogue()

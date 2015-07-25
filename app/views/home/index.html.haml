@@ -1,0 +1,92 @@
+#myCarousel.carousel.slide
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    / %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    / %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item.active
+      %img.img-responsive{:src => asset_path('bg_suburb.jpg'), :style => "width:100%"}/
+      .container
+        .carousel-caption
+          %h1 Catalogue Plaza
+          %h4 在线Catalogue发布系统
+          %br
+          %br
+          %p
+          %p
+            %a.btn.btn-lg.btn-success{:href => "/catalogues/new"} 现在就发布Catalogue
+    / .item
+    /   %img.img-responsive{:src => "http://lorempixel.com/2000/600/abstract/1"}/
+    /   .container
+    /     .carousel-caption
+    /       %h1 Changes to the Grid
+    /       %p Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.
+    /       %p
+    /         %a.btn.btn-large.btn-primary{:href => "#"} Learn more
+    / .item
+    /   %img.img-responsive{:src => "http://placehold.it/1500X500"}/
+    /   .container
+    /     .carousel-caption
+    /       %h1 Percentage-based sizing
+    /       %p With "mobile-first" there is now only one percentage-based grid.
+    /       %p
+    /         %a.btn.btn-large.btn-primary{:href => "#"} Browse gallery
+  / Controls
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+    %span.icon-prev
+  %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+    %span.icon-next
+/ /.carousel
+/
+  Marketing messaging and featurettes
+  \==================================================
+/ Wrap the rest of the page in another container to center all the content.
+.container.marketing
+  / Three columns of text below the carousel
+  .row
+    .col-md-4.text-center
+      %img.img-circle{:src => "http://placehold.it/140x140"}/
+      %h2 易于浏览
+      %p 手机，电脑，平板均可浏览你的Catalogue，大大增加Catalogue的浏览率
+      %p
+        %a.btn.btn-default{:href => "#"} 查看更多 »
+    .col-md-4.text-center
+      %img.img-circle{:src => "http://placehold.it/140x140"}/
+      %h2 易于分享
+      %p 支持分享到微博，微信，facebook，google+， twitter等国内外主流社交媒体。
+      %p
+        %a.btn.btn-default{:href => "#"} 查看更多 »
+    .col-md-4.text-center
+      %img.img-circle{:src => "http://placehold.it/140x140"}/
+      %h2 更多客户
+      %p 搜索引擎优化，一键发送邮件。更多客户将能发现你的产品并跟你联系
+      %p
+        %a.btn.btn-default{:href => "#"} 查看更多 »
+  / /.row
+  / START THE FEATURETTES
+  / %hr.featurette-divider/
+  / .featurette
+  /   %img.featurette-image.img-circle.pull-right{:src => "http://placehold.it/512"}/
+  /   %h2.featurette-heading
+  /     Responsive Design.
+  /     %span.text-muted It'll blow your mind.
+  /   %p.lead In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.
+  / %hr.featurette-divider/
+  / .featurette
+  /   %img.featurette-image.img-circle.pull-left{:src => "http://placehold.it/512"}/
+  /   %h2.featurette-heading
+  /     Smaller Footprint.
+  /     %span.text-muted Lightweight.
+  /   %p.lead The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.
+  / %hr.featurette-divider/
+  / .featurette
+  /   %img.featurette-image.img-circle.pull-right{:src => "http://placehold.it/512"}/
+  /   %h2.featurette-heading
+  /     And lastly, this one.
+  /     %span.text-muted Flatness.
+  /   %p.lead A big design trend for 2013 is "flat" design. Gone are the days of excessive gradients and shadows. Designers are producing cleaner flat designs, and Bootstrap 3 takes advantage of this minimalist trend.
+  / %hr.featurette-divider/
+  / /END THE FEATURETTES
+  / FOOTER
+  

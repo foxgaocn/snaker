@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :catalogues
+  resources :catalogues do
+    get :processed, on: :member
+  end
 end
