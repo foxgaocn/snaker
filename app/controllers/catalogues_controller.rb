@@ -5,19 +5,22 @@ class CataloguesController < ApplicationController
 
   def create
     @catalogue = Catalogue.new( catalogue_params )
-    binding.pry
     if @catalogue.save
       Spawnling.new do
         PdfConverter.convert(@catalogue.id)
       end
-      render json: {id: @catalogue.id}, status: 201
+      redirect_to processing_catalogue_path(@catalogue.id)
     else
-      render nothing: true, status: 400
+      render plain: "出错了"
     end
   end
 
   def show
     @catalogue = Catalogue.find params[:id]
+  end
+
+  def processing
+    @id = params[:id]
   end
 
   def processed

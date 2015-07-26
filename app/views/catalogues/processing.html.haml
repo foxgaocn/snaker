@@ -1,0 +1,17 @@
+.container.content
+  .row
+    .col-sm-12.center
+      %h2 轻松创建你的在线Catalogue
+  %br
+  %br
+  
+
+
+  #myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-body
+          %h2 正在处理你的Catalogue，请稍候.......
+
+  :javascript
+    new Catalogue("#{@id}")

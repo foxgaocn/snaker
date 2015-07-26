@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :catalogues do
     get :processed, on: :member
+    get :processing, on: :member
   end
 end
